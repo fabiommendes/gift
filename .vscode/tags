@@ -1,0 +1,92 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+__author__	../src/gift/__init__.py	/^from .__meta__ import __author__, __version__/;"	kind:namespace	line:1
+__author__	../src/gift/__meta__.py	/^__author__ = 'Universidade de Bras\\\\xedlia at Gama'/;"	kind:variable	line:3
+__init__.py	../src/gift/__init__.py	1;"	kind:file	line:1
+__init__.py	../src/gift/tests/__init__.py	1;"	kind:file	line:1
+__main__.py	../src/gift/tests/__main__.py	1;"	kind:file	line:1
+__meta__.py	../src/gift/__meta__.py	1;"	kind:file	line:1
+__version__	../src/gift/__init__.py	/^from .__meta__ import __author__, __version__/;"	kind:namespace	line:1
+__version__	../src/gift/__meta__.py	/^__version__ = '0.1.0'$/;"	kind:variable	line:2
+__version__	../src/gift/tests/__main__.py	/^from gift import __version__$/;"	kind:namespace	line:4
+_wrapped	../src/gift/tests/test_documentation.py	/^    def _wrapped(func, name):$/;"	kind:function	line:18
+argparse	../src/gift/tests/__main__.py	/^import argparse$/;"	kind:namespace	line:2
+author	../docs/conf.py	/^author = 'Universidade de Bras\\\\xedlia at Gama'$/;"	kind:variable	line:56
+author	../setup.py	/^    author='Universidade de Brasília at Gama',$/;"	kind:variable	line:28
+author_email	../setup.py	/^    author_email='fabiomacedomendes@gmail.com',$/;"	kind:variable	line:29
+classifiers	../setup.py	/^    classifiers=[$/;"	kind:variable	line:35
+codeblock	../src/gift/tests/test_documentation.py	/^import manuel.codeblock$/;"	kind:namespace	line:5
+codecs	../setup.py	/^import codecs$/;"	kind:namespace	line:10
+conf.py	../docs/conf.py	1;"	kind:file	line:1
+configure	../tasks.py	/^def configure(ctx):$/;"	kind:function	line:7
+copyright	../docs/conf.py	/^copyright = '2016, %s' % author$/;"	kind:variable	line:57
+description	../setup.py	/^    description='A short description for your project.',$/;"	kind:variable	line:31
+dirname	../docs/conf.py	/^dirname = os.path.dirname(__file__)$/;"	kind:variable	line:63
+dirname	../setup.py	/^dirname = os.path.dirname(__file__)$/;"	kind:variable	line:15
+doctest	../src/gift/tests/test_documentation.py	/^import manuel.doctest$/;"	kind:namespace	line:6
+exclude_patterns	../docs/conf.py	/^exclude_patterns = ['_build']$/;"	kind:variable	line:83
+extensions	../docs/conf.py	/^extensions = [$/;"	kind:variable	line:32
+extras_require	../setup.py	/^    extras_require={$/;"	kind:variable	line:53
+find_packages	../setup.py	/^from setuptools import setup, find_packages$/;"	kind:namespace	line:11
+get_parser	../src/gift/tests/__main__.py	/^def get_parser():$/;"	kind:function	line:7
+gift	../src/gift/tests/__main__.py	/^    import gift.tests as test_module$/;"	kind:namespace	line:36
+gift	../src/gift/tests/test_gift.py	/^import gift$/;"	kind:namespace	line:2
+html_static_path	../docs/conf.py	/^html_static_path = ['_static']$/;"	kind:variable	line:146
+html_theme	../docs/conf.py	/^html_theme = 'alabaster'$/;"	kind:variable	line:117
+htmlhelp_basename	../docs/conf.py	/^htmlhelp_basename = '%sdoc' % project$/;"	kind:variable	line:209
+ignore	../src/gift/tests/test_documentation.py	/^import manuel.ignore$/;"	kind:namespace	line:4
+install_requires	../setup.py	/^    install_requires=[$/;"	kind:variable	line:51
+language	../docs/conf.py	/^language = None$/;"	kind:variable	line:73
+latex_documents	../docs/conf.py	/^latex_documents = [$/;"	kind:variable	line:230
+latex_elements	../docs/conf.py	/^latex_elements = {$/;"	kind:variable	line:213
+long_description	../setup.py	/^    long_description=codecs.open('README.rst', 'rb', 'utf8').read(),$/;"	kind:variable	line:32
+main	../src/gift/tests/__main__.py	/^def main(args=None):$/;"	kind:function	line:17
+make_manuel_suite	../src/gift/tests/test_documentation.py	/^def make_manuel_suite(ns):$/;"	kind:function	line:10
+man_pages	../docs/conf.py	/^man_pages = [$/;"	kind:variable	line:260
+manuel	../src/gift/tests/test_documentation.py	/^import manuel.codeblock$/;"	kind:namespace	line:5
+manuel	../src/gift/tests/test_documentation.py	/^import manuel.doctest$/;"	kind:namespace	line:6
+manuel	../src/gift/tests/test_documentation.py	/^import manuel.ignore$/;"	kind:namespace	line:4
+manuel	../src/gift/tests/test_documentation.py	/^import manuel.testing$/;"	kind:namespace	line:7
+master_doc	../docs/conf.py	/^master_doc = 'index'$/;"	kind:variable	line:51
+name	../setup.py	/^    name='gift',$/;"	kind:variable	line:26
+os	../docs/conf.py	/^import os$/;"	kind:namespace	line:17
+os	../setup.py	/^import os$/;"	kind:namespace	line:9
+os	../src/gift/tests/__main__.py	/^import os$/;"	kind:namespace	line:1
+os	../src/gift/tests/test_documentation.py	/^import os$/;"	kind:namespace	line:1
+package_dir	../setup.py	/^    package_dir={'': 'src'},$/;"	kind:variable	line:49
+packages	../setup.py	/^    packages=find_packages('src'),$/;"	kind:variable	line:50
+path	../setup.py	/^path = os.path.join(dirname, 'src', 'gift', '__meta__.py')$/;"	kind:variable	line:16
+platforms	../setup.py	/^    platforms='any',$/;"	kind:variable	line:61
+projdir	../docs/conf.py	/^projdir = os.path.dirname(dirname)$/;"	kind:variable	line:64
+project	../docs/conf.py	/^project = 'gift'$/;"	kind:variable	line:54
+project_title	../docs/conf.py	/^project_title = project.title()$/;"	kind:variable	line:55
+pygments_style	../docs/conf.py	/^pygments_style = 'sphinx'$/;"	kind:variable	line:101
+pytest	../src/gift/tests/__main__.py	/^        import pytest$/;"	kind:namespace	line:27
+pytest	../src/gift/tests/test_documentation.py	/^import pytest$/;"	kind:namespace	line:3
+pytest	../src/gift/tests/test_gift.py	/^import pytest$/;"	kind:namespace	line:1
+release	../docs/conf.py	/^release = open(os.path.join(projdir, 'VERSION')).read().strip()$/;"	kind:variable	line:65
+run	../tasks.py	/^from invoke import run, task$/;"	kind:namespace	line:2
+setup	../setup.py	/^from setuptools import setup, find_packages$/;"	kind:namespace	line:11
+setup.py	../setup.py	1;"	kind:file	line:1
+source_suffix	../docs/conf.py	/^source_suffix = '.rst'$/;"	kind:variable	line:45
+sys	../docs/conf.py	/^import sys$/;"	kind:namespace	line:16
+sys	../tasks.py	/^import sys$/;"	kind:namespace	line:1
+task	../tasks.py	/^from invoke import run, task$/;"	kind:namespace	line:2
+tasks.py	../tasks.py	1;"	kind:file	line:1
+templates_path	../docs/conf.py	/^templates_path = ['_templates']$/;"	kind:variable	line:40
+test_documentation.py	../src/gift/tests/test_documentation.py	1;"	kind:file	line:1
+test_gift.py	../src/gift/tests/test_gift.py	1;"	kind:file	line:1
+test_module	../src/gift/tests/__main__.py	/^    import gift.tests as test_module$/;"	kind:namespace	line:36
+test_project_defines_author_and_version	../src/gift/tests/test_gift.py	/^def test_project_defines_author_and_version():$/;"	kind:function	line:5
+testing	../src/gift/tests/test_documentation.py	/^import manuel.testing$/;"	kind:namespace	line:7
+texinfo_documents	../docs/conf.py	/^texinfo_documents = [$/;"	kind:variable	line:274
+todo_include_todos	../docs/conf.py	/^todo_include_todos = False$/;"	kind:variable	line:110
+url	../setup.py	/^    url='',$/;"	kind:variable	line:30
+version	../docs/conf.py	/^version = '.'.join(release.split('.')[:2])$/;"	kind:variable	line:66
+version	../setup.py	/^    version=version,$/;"	kind:variable	line:27
+version	../setup.py	/^version = open('VERSION').read().strip()$/;"	kind:variable	line:14
+zip_safe	../setup.py	/^    zip_safe=False,$/;"	kind:variable	line:60
