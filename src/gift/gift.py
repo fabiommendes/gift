@@ -15,11 +15,14 @@ class Gift:
 
     def lexer(self, string):
         lexer = ox.make_lexer([
-                ('ANSWER', r'=.+?(?=~)'),
-                ('OPTION', r'~.+?(?=[~}])'),
-                ('QUESTION', r'.+?(?={)'),
-                ('LBRACKET', r'{'),
-                ('RBRACKET', r'}'),
+            ('ANSWER', r'=.+?(?=[~\#])'),
+            ('OPTION', r'~.+?(?=[~}\#])'),
+            ('FEEDBACK', r'\#.+?(?=[~}])'),
+            ('QUESTION', r'.+?(?={)'),
+            ('TRUE_VALUE', r'T|TRUE'),
+            ('FALSE_VALUE', r'F|FALSE'),
+            ('LBRACKET', r'{'),
+            ('RBRACKET', r'}'),
         ])
 
         return lexer(string)
@@ -28,14 +31,27 @@ class Gift:
 
         self.lexer(string)
 
-        self._token_list = ['ANSWER', 'OPTION', 'QUESTION', 'LBRACKET', 'RBRACKET']
+        self._token_list = [
+            'ANSWER', 'OPTION', 'QUESTION',
+            'TRUE_VALUE', 'FALSE_VALUE',
+            'LBRACKET', 'RBRACKET', 'FEEDBACK'
+        ]
         
+        print(self.lexer(string))
+
         parser = ox.make_parser([
-            ('question : cmd LBRACKET answer options RBRACKET', lambda x, a, y , z, b: (x , y ,z)),
+            ('question : statement', lambda x: x),
+            ('statement : cmd LBRACKET TRUE_VALUE RBRACKET', lambda x1,x2,x3,x4: (x1, x3)),
+            ('statement : cmd LBRACKET FALSE_VALUE RBRACKET', lambda x1,x2,x3,x4: (x1, x3)),
+            ('statement : cmd LBRACKET answer options RBRACKET', lambda x, a, y , z, b: (x , y ,z)),
             ('cmd : QUESTION', lambda x: x),
             ('options : options option', lambda x,y: x + [y]),
             ('options : option', lambda x: [x]),
+            ('option : option FEEDBACK', lambda x,y: (x, y)),
             ('option : OPTION', lambda x: x[1:].rstrip()),
+            ('option : TRUE_VALUE', lambda x: x),
+            ('option : FALSE_VALUE', lambda x: x),
+            ('answer : answer FEEDBACK', lambda x,y: (x, y)),
             ('answer : ANSWER', lambda x: x[1:].rstrip()),
         ], self._token_list)
         
@@ -50,9 +66,15 @@ class Gift:
         s = self.question + '\n'
 
         for option in self.options:
-            s += option + '\n'
+            if(type(option) == tuple):
+                s += option[0] + ' Feedback: ' + option[1] + '\n'
+            else:
+                s += str(option) + '\n'
 
-        s += "ANSWER: " + self.answer
+        if(type(self.answer) == tuple):
+            s += "ANSWER" + self.answer[0]
+        else:
+            s += "ANSWER: " + self.answer
 
         return s
 
@@ -78,9 +100,14 @@ def load(file_or_string):
 
     gift.answer = ast[1]
 
-    for option in ast[2]:
-        gift.options += [option]
-
+    if len(ast) > 2:
+        for option in ast[2]:
+            gift.options += [option]
+    else:
+        # Do nothing 
+        pass
+        
+    
     gift.options += [gift.answer];
     shuffle(gift.options)
 
@@ -109,4 +136,10 @@ def dump(gift, file=None):
 gift = Gift()
 
 dump(load("Who's buried in Grant's tomb?{=Grant ~no one ~Napoleon ~Churchill ~Mother Teresa }"))
+print('\n')
+dump(load("TestQ{=Test # You're right! ~OtherTest # You're wrong! ~AnotherTest}"))
+print('\n')
+dump(load("1+1=2 {T}"))
+print('\n')
+dump(load("1+1=3 {F}"))
 
